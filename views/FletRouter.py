@@ -5,6 +5,7 @@ import flet as ft
 from views.menu_view import MenuView
 from views.register_view import RegisterView
 from views.loading_view import LoadingView
+from views.finish_view import FinishView
 
 # Router
 
@@ -16,7 +17,8 @@ class Router:
         self.routes = {
             '/menu': MenuView(page),
             '/reg': RegisterView(page),
-            '/loading': LoadingView(page)
+            '/loading': LoadingView(page),
+            '/finish': FinishView(page),
             
         }
         self.body = ft.Container(content=self.routes['/menu'])

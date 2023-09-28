@@ -1,5 +1,6 @@
 import flet as ft
 from views.FletRouter import Router
+from modules.colors import gradient_mint1
 
 # Main
 
@@ -18,7 +19,17 @@ def main(page: ft.Page):
     page.on_route_change = myRouter.route_change
 
     page.add(
-        myRouter.body
+        ft.Container(
+            content=myRouter.body,
+            expand=True,
+            padding=ft.padding.all(0),
+            gradient=ft.LinearGradient(
+                colors=gradient_mint1,
+                begin=ft.alignment.top_center,
+                end=ft.alignment.bottom_center,
+                tile_mode=ft.GradientTileMode.MIRROR
+            )
+        )
     )
 
     page.go('/menu')

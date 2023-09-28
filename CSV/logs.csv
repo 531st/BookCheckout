@@ -1,0 +1,16 @@
+uuid,book_name,author,operation,carrier,operation_date
+51601f51-d356-41a9-8c56-20a8f03d0a5b,test_book,test_auth,taken,t,19-09-23 16:14
+526941cb-355e-4cb3-b243-d4b840123a7b,test_book,test_auth,taken,t,19-09-23 16:39
+631f3aa2-3158-4807-9870-e48e4a2fd364,test_book,test_auth,taken,Stock,19-09-23 16:52
+53db9372-5e6d-44f1-b927-3b84edf8a727,test_book,test_auth,returned,Stock,19-09-23 16:53
+adac0586-1c19-47f4-9b41-a058c4b461dd,test_book,test_auth,taken,test,19-09-23 16:57
+473ef2d1-06ac-42a4-a9a2-24175eb6558a,test_book,test_auth,taken,t,19-09-23 17:02
+74d83633-e509-4de4-8209-d998b81f4301,test_book,test_auth,taken,t,19-09-23 17:08
+e8a21488-aa55-43ba-99ef-2e469abd224a,test_book,test_auth,returned,Stock,19-09-23 17:09
+cd8f00f1-4430-455b-9f61-0476af1adc20,test_book,test_auth,taken,striga.v,27-09-23 15:21
+d55176eb-f8a6-433b-b423-8c391b9b4a74,test_book,test_auth,returned,Stock,27-09-23 15:40
+07660ff0-42ec-4485-84ce-2aa4e3f60282,test_book,test_auth,returned,Stock,27-09-23 15:40
+8761f021-008c-49e0-bda6-649b0c7b27f4,test_book,test_auth,returned,Stock,27-09-23 15:43
+c71ef33a-1e58-43a7-bd35-e74d4ac9b847,test_book,test_auth,returned,Stock,27-09-23 15:48
+2d571f9c-6621-4f54-88e6-5fb549330718,test_book,test_auth,taken,Striga.v,28-09-23 08:54
+f00af3aa-70ab-4120-accf-ac3f969a15c3,test_book,test_auth,returned,Stock,28-09-23 08:56

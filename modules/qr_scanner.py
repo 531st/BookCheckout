@@ -4,6 +4,7 @@ import ctypes
 import pygetwindow as gw
 import win32gui
 import win32con
+import time
 
 def read_qr_code(page):
     page.go('/loading')
@@ -19,7 +20,7 @@ def read_qr_code(page):
     cv2.namedWindow("QR Code Scanner", cv2.WINDOW_NORMAL)
     cv2.setWindowProperty("QR Code Scanner", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
     
-
+    start_time = time.time()
     while True:
         # Read frame from the camera
         ret, frame = cap.read()
@@ -39,7 +40,7 @@ def read_qr_code(page):
             # Close the camera window
             cv2.destroyAllWindows()
             cap.release()
-            page.go('/menu')
+            page.go('/finish')
             return data
 
         # Display the frame with QR code detection
@@ -52,6 +53,12 @@ def read_qr_code(page):
         # Check for key press to exit
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
+
+        # Check for 20 second timer to exit
+        if time.time() - start_time >= 20:
+            print("Cut off due to time limit")
+            break
+        
     
     
     # Close the camera window

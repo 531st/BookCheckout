@@ -1,0 +1,3 @@
+uuid,book_name,author,status,carrier,last_change
+<function uuid4 at 0x0000016F7A383740>,test_book,test_auth,In stock,Stock,18-09-23 14:59
+6aecd1e6-74f5-4198-9981-570918f385c7,test_book,test_auth,returned,Stock,28-09-23 08:56
