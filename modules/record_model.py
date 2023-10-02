@@ -33,7 +33,7 @@ class Record:
             cursor.execute("UPDATE books SET status = ?, carrier = ?, last_change =? WHERE uuid = ?", 
             (self.operation, self.carrier, self.date, self.book_id,))
             print(f"Row {self.book_id} updated successfully.")
-            
+
         else:
             cursor.execute("""INSERT INTO books (uuid, book_name, author, status, carrier, last_change)
             VALUES (?, ?, ?, ?, ?, ?)""", 
