@@ -28,7 +28,8 @@ def RegisterView(page):
                     text_size=80,
                     on_change=login_changed, 
                     label_style=ft.TextStyle(color=ft.colors.WHITE, size=40), 
-                    bgcolor=ft.colors.with_opacity(0.1,color_mint2)
+                    bgcolor=ft.colors.with_opacity(0.1,color_mint2),
+                    
                     )
             ],
             alignment=ft.MainAxisAlignment.CENTER, 

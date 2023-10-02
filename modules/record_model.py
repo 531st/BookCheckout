@@ -32,12 +32,13 @@ class Record:
             # Execute an UPDATE query to change the columns
             cursor.execute("UPDATE books SET status = ?, carrier = ?, last_change =? WHERE uuid = ?", 
             (self.operation, self.carrier, self.date, self.book_id,))
-
-            # Commit the changes to the database
-            conn.commit()
             print(f"Row {self.book_id} updated successfully.")
+            
         else:
-            print("Row not found.")
+            cursor.execute("""INSERT INTO books (uuid, book_name, author, status, carrier, last_change)
+            VALUES (?, ?, ?, ?, ?, ?)""", 
+            (self.book_id, self.name, self.author, "In Stock", self.carrier, self.date))
+            print(f"New book {self.name} added to DB.")
         
         conn.commit()
         conn.close()
